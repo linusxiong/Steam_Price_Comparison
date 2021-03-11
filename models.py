@@ -1,8 +1,17 @@
+import json
+from bson import ObjectId
 from re import sub
 from sys import stderr
 from html.parser import HTMLParser
 from traceback import print_exc
 from bs4 import BeautifulSoup
+
+
+class JSONEncoder(json.JSONEncoder):
+    def default(self, o):
+        if isinstance(o, ObjectId):
+            return str(o)
+        return json.JSONEncoder.default(self, o)
 
 
 class _DeHTMLParser(HTMLParser):

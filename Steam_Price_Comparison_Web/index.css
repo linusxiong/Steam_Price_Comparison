@@ -1,0 +1,16 @@
+.footer {
+    padding: 25px;
+    background-color: #424242;
+    color: #9e9e9e;
+}
+.footer a {
+    color: inherit;
+    text-decoration: none;
+}
+.footer a:hover {
+    color: #bbbbbb;
+}
+.footer-copyright {
+    text-align: center;
+    font-size: 12px;
+}

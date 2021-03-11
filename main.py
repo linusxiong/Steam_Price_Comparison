@@ -4,7 +4,7 @@ import spider
 
 
 def run():
-    api.app.run(debug=True, port=8080)
+    api.app.run(host='0.0.0.0', debug=True, port=8080)
 
 
 
